@@ -1,2 +1,2 @@
 # vCheck-SDDC-SZ
-vCheck SDDC VMware
+vCollect SDDC VMware
