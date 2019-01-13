@@ -136,16 +136,16 @@ foreach ($vCenter in $vCenterList){
             $vCenter = $VM.ExtensionData.Client.ServiceUrl.Split('/')[2].trimend(":443") 
 
             $Product = New-Object PSObject 
-            $Product | add-member -MemberType NoteProperty -Name "Data Center"         -Value $datacenter
-            $Product | add-member -MemberType NoteProperty -Name "vCenter"             -Value $vCenter 
-            $Product | add-member -MemberType NoteProperty -Name "Cluster"             -Value $cluster
-            $Product | add-member -MemberType NoteProperty -Name "Host"                -Value $VM.VMHost 
-            $Product | add-member -MemberType NoteProperty -Name "VMName"              -Value $VM.name;
-            $Product | add-member -MemberType NoteProperty -Name "ProductName"         -Value $VM.extensiondata.summary.config.product.name;
-            $Product | add-member -MemberType NoteProperty -Name "Version"             -Value $VM.extensiondata.summary.config.product.version;
-            $Product | add-member -MemberType NoteProperty -Name "FullVersion"         -Value $VM.extensiondata.summary.config.product.fullversion;
-            $Product | add-member -MemberType NoteProperty -Name "ProductURL"          -Value $VM.extensiondata.summary.config.product.producturl;
-            $Product | add-member -MemberType NoteProperty -Name "AppURL"              -Value $VM.extensiondata.summary.config.product.appurl
+            $Product | add-member -MemberType NoteProperty -Name "Data Center"          -Value $datacenter
+            $Product | add-member -MemberType NoteProperty -Name "vCenter"              -Value $vCenter 
+            $Product | add-member -MemberType NoteProperty -Name "Cluster"              -Value $cluster
+            $Product | add-member -MemberType NoteProperty -Name "Host"                 -Value $VM.VMHost 
+            $Product | add-member -MemberType NoteProperty -Name "VM Name"              -Value $VM.name;
+            $Product | add-member -MemberType NoteProperty -Name "Product Name"         -Value $VM.extensiondata.summary.config.product.name;
+            $Product | add-member -MemberType NoteProperty -Name "Version"              -Value $VM.extensiondata.summary.config.product.version;
+            $Product | add-member -MemberType NoteProperty -Name "Full Version"         -Value $VM.extensiondata.summary.config.product.fullversion;
+            $Product | add-member -MemberType NoteProperty -Name "Product URL"          -Value $VM.extensiondata.summary.config.product.producturl;
+            $Product | add-member -MemberType NoteProperty -Name "App URL"              -Value $VM.extensiondata.summary.config.product.appurl
             $report += $Product 
             }
 
