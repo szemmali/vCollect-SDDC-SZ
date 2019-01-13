@@ -1,1 +1,0 @@
-# All vCollect Functions
